@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, TextContent } from './styles';
+import { Container, ImageWrapper, TextContent } from './styles';
 import placeholderImage from '../../../assets/images/placeholder-image.jpg';
 
 const PrimaryNewsCard = ({
@@ -14,7 +14,9 @@ const PrimaryNewsCard = ({
 }) => {
     return (
         <Container>
-            <img src={placeholderImage} alt="gg" />
+            <ImageWrapper>
+                <img src={placeholderImage} alt="gg" />
+            </ImageWrapper>
             <TextContent>
                 <h3>{title}</h3>
                 <p>{description}</p>

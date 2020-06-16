@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { QUERIES } from '../../styling';
+import { QUERIES } from 'styling';
 import SecondaryNewsCard from '../NewsCards/SecondaryNewsCard';
 
 export const Container = styled.div`

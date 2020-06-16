@@ -1,6 +1,7 @@
 export const COLOURS = {
     darkPurple: '#651fff',
     lightGrey: '#e0e0e0',
+    darkGrey: '#545454',
 };
 
 export const QUERIES = {

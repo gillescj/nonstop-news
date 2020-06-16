@@ -1,5 +1,11 @@
 import React from 'react';
-import { Container, ImageWrapper, TextContent } from './styles';
+import {
+    Container,
+    ImageWrapper,
+    TextContent,
+    ArticleMainText,
+    ArticleInfo,
+} from './styles';
 import placeholderImage from '../../../assets/images/placeholder-image.jpg';
 
 const PrimaryNewsCard = ({
@@ -18,10 +24,14 @@ const PrimaryNewsCard = ({
                 <img src={placeholderImage} alt="gg" />
             </ImageWrapper>
             <TextContent>
-                <h3>{title}</h3>
-                <p>{description}</p>
-                <div>{author}</div>
-                <div>{publishedAt}</div>
+                <ArticleMainText>
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                </ArticleMainText>
+                <ArticleInfo>
+                    <div>{author}</div>
+                    <div>{publishedAt}</div>
+                </ArticleInfo>
             </TextContent>
         </Container>
     );

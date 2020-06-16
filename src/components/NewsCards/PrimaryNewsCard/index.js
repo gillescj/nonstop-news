@@ -21,7 +21,7 @@ const PrimaryNewsCard = ({
     return (
         <Container>
             <ImageWrapper>
-                <img src={placeholderImage} alt="gg" />
+                <img src={placeholderImage} alt={title} />
             </ImageWrapper>
             <TextContent>
                 <ArticleMainText>

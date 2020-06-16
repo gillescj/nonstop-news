@@ -1,5 +1,11 @@
 import React from 'react';
-import { Container, SubContent, TextContent } from './styles';
+import {
+    Container,
+    ImageWrapper,
+    TextContent,
+    ArticleMainText,
+    ArticleInfo,
+} from './styles';
 import placeholderImage from 'assets/images/placeholder-image.jpg';
 
 const SecondaryNewsCard = ({
@@ -14,14 +20,18 @@ const SecondaryNewsCard = ({
 }) => {
     return (
         <Container>
-            <h3>{title}</h3>
-            <SubContent>
-                <img src={placeholderImage} alt="gg" />
-                <TextContent>
+            <ImageWrapper>
+                <img src={placeholderImage} alt={title} />
+            </ImageWrapper>
+            <TextContent>
+                <ArticleMainText>
+                    <h3>{title}</h3>
+                </ArticleMainText>
+                <ArticleInfo>
                     <div>{author}</div>
                     <div>{publishedAt}</div>
-                </TextContent>
-            </SubContent>
+                </ArticleInfo>
+            </TextContent>
         </Container>
     );
 };

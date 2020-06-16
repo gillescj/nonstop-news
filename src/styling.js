@@ -1,4 +1,6 @@
-export const COLOURS = {};
+export const COLOURS = {
+    darkPurple: '#651fff',
+};
 
 export const QUERIES = {
     small: 'min-width: 500px',

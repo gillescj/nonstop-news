@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, SubContent, TextContent } from './styles';
-import placeholderImage from '../../../assets/images/placeholder-image.jpg';
+import placeholderImage from 'assets/images/placeholder-image.jpg';
 
 const SecondaryNewsCard = ({
     id,

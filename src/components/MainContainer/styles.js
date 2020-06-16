@@ -8,7 +8,7 @@ export const Container = styled.div`
     grid-gap: 1rem;
     padding: 1rem;
     max-width: ${QUERIES.maxWidth};
-    grid-template-columns: minmax(15rem, 35rem) minmax(5rem, 18rem) minmax(5rem, 18rem);
+    grid-template-columns: minmax(15rem, 35rem) minmax(15rem, 20rem) minmax(15rem, 20rem);
 `;
 
 export const SecondaryNewsCardContainer = styled.div`

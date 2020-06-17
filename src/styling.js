@@ -6,7 +6,8 @@ export const COLOURS = {
 };
 
 export const QUERIES = {
-    small: 'min-width: 500px',
-    medium: 'min-width: 1000px',
+    small: 'max-width: 600px',
+    medium: 'max-width: 1100px',
+    large: 'max-width: 1400px',
     maxWidth: '1400px',
 };

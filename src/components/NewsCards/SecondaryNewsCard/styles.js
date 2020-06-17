@@ -18,7 +18,8 @@ export const Container = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-    max-width: 10rem;
+    max-width: 12rem;
+    max-height: 12rem;
     justify-self: center;
     float: right;
 `;

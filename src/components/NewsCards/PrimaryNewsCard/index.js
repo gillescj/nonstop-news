@@ -6,22 +6,22 @@ import {
     ArticleMainText,
     ArticleInfo,
 } from './styles';
-import placeholderImage from '../../../assets/images/placeholder-image.jpg';
+import faker from 'faker';
 
 const PrimaryNewsCard = ({
     sourceName = 'FXStreet',
     author = 'Yohay Elam',
-    title = "Forex Today: Double stimulus talk downs dollar ahead of Powell's power-play, US retail sales",
-    description = `Here is what you need to know on Tuesday, June 16: The market mood is \"risk-on\" once again, as the Federal Reserve announced buying corporate bonds an`,
+    title = faker.lorem.sentences(Math.floor(Math.random() * 3) + 1),
+    description = faker.lorem.paragraphs(Math.floor(Math.random() * 2) + 1),
     publishedAt = '2020-06-16T06:07:43Z',
     url = 'https://www.fxstreet.com/news/forex-today-double-stimulus-talk-downs-dollar-ahead-of-powells-power-play-us-retail-sales-202006160607',
     id,
-    urlToImage,
+    urlToImage = faker.image.image(),
 }) => {
     return (
         <Container>
             <ImageWrapper>
-                <img src={placeholderImage} alt={title} />
+                <img src={urlToImage} alt={title} />
             </ImageWrapper>
             <TextContent>
                 <ArticleMainText>

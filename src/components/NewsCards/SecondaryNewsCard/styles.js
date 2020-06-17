@@ -10,6 +10,11 @@ export const Container = styled.div`
     padding: 1rem;
     max-width: 20rem;
     border: 1px solid ${COLOURS.lightGrey};
+    transition: 0.4s;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0 0 0 3px ${COLOURS.darkPurple};
+    }
 `;
 
 export const ImageWrapper = styled.div`

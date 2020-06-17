@@ -29,6 +29,7 @@ const SecondaryNewsCard = ({
                 </ArticleMainText>
                 <ArticleInfo>
                     <div>{author}</div>
+                    <div>{sourceName}</div>
                     <div>{publishedAt}</div>
                 </ArticleInfo>
             </TextContent>

@@ -4,11 +4,11 @@ import { COLOURS } from 'styling';
 export const Container = styled.div`
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: minmax(5rem, 20rem);
+    grid-template-columns: minmax(5rem, 30rem);
     align-items: space-between;
     font-size: 0.9rem;
     padding: 1rem;
-    max-width: 20rem;
+    max-width: 30rem;
     border: 1px solid ${COLOURS.lightGrey};
     transition: 0.4s;
     cursor: pointer;

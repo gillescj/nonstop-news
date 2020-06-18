@@ -1,14 +1,18 @@
 import React from 'react';
-import { Container } from './styles';
+import { Container, PrimaryNewsCardsContainer } from './styles';
 import PrimaryNewsCard from '../NewsCards/PrimaryNewsCard';
+import TextNewsCard from '../NewsCards/TextNewsCard';
 
 const MiddleContent = () => {
     return (
         <Container>
-            <PrimaryNewsCard />
-            <PrimaryNewsCard />
-            <PrimaryNewsCard />
-            <PrimaryNewsCard />
+            <PrimaryNewsCardsContainer>
+                <PrimaryNewsCard />
+                <PrimaryNewsCard />
+                <PrimaryNewsCard />
+                <PrimaryNewsCard />
+            </PrimaryNewsCardsContainer>
+            <TextNewsCard />
         </Container>
     );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from './styles';
 import TextNewsCardItem from './TextNewsCardItem';
-import _ from 'lodash';
+import { uniqueId } from 'lodash';
 
 const dummyNewsItem = {
     sourceName: 'FXStreet',
@@ -27,7 +27,7 @@ const TextNewsCard = ({
     ],
 }) => {
     const renderedNewsCardItems = newsItems.map((newsItem) => {
-        return <TextNewsCardItem key={_.uniqueId()} newsItem={newsItem} />;
+        return <TextNewsCardItem key={uniqueId()} newsItem={newsItem} />;
     });
 
     return <Container>{renderedNewsCardItems}</Container>;

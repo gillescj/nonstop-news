@@ -2,7 +2,15 @@ import './base.scss';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import App from './components/App';
+import { Provider } from 'react-redux';
+import configureStore from 'store/configureStore';
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+const store = configureStore();
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.querySelector('#root')
+);

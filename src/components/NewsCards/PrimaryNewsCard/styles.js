@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { COLOURS } from 'styling';
 
-export const Container = styled.div`
+export const Container = styled.a`
     display: grid;
     grid-template-columns: minmax(15rem, 35rem);
     grid-template-rows: auto 1fr;

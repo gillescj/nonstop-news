@@ -3,14 +3,14 @@ import { Container, SecondaryNewsCardContainer } from './styles';
 import PrimaryNewsCard from '../NewsCards/PrimaryNewsCard';
 import SecondaryNewsCard from '../NewsCards/SecondaryNewsCard';
 
-const TopContent = () => {
+const TopContent = ({ topArticles }) => {
     return (
         <Container>
-            <PrimaryNewsCard />
-            <PrimaryNewsCard />
+            <PrimaryNewsCard article={topArticles[0]} />
+            <PrimaryNewsCard article={topArticles[1]} />
             <SecondaryNewsCardContainer>
-                <SecondaryNewsCard />
-                <SecondaryNewsCard />
+                <SecondaryNewsCard article={topArticles[2]} />
+                <SecondaryNewsCard article={topArticles[3]} />
             </SecondaryNewsCardContainer>
         </Container>
     );

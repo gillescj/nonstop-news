@@ -2,24 +2,12 @@ import React from 'react';
 import { Container } from './styles';
 import SecondaryNewsCard from '../NewsCards/SecondaryNewsCard';
 
-const BottomContent = () => {
-    const twelveNewsCards = (
-        <>
-            <SecondaryNewsCard />
-            <SecondaryNewsCard />
-            <SecondaryNewsCard />
-            <SecondaryNewsCard />
-            <SecondaryNewsCard />
-            <SecondaryNewsCard />
-            <SecondaryNewsCard />
-            <SecondaryNewsCard />
-            <SecondaryNewsCard />
-            <SecondaryNewsCard />
-            <SecondaryNewsCard />
-            <SecondaryNewsCard />
-        </>
-    );
-    return <Container>{twelveNewsCards}</Container>;
+const BottomContent = ({ bottomArticles }) => {
+    const renderedBottomNewsCards = bottomArticles.map((article) => {
+        return <SecondaryNewsCard key={article.title} article={article} />;
+    });
+
+    return <Container>{renderedBottomNewsCards}</Container>;
 };
 
 export default BottomContent;

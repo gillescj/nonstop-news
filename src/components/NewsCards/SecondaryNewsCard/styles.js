@@ -26,6 +26,7 @@ export const ImageWrapper = styled.div`
 
 export const TextContent = styled.div`
     display: grid;
+    grid-gap: 1rem;
 `;
 
 export const ArticleMainText = styled.div`

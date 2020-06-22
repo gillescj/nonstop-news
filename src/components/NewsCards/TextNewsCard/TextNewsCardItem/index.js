@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container } from './styles';
+import { Container, TextContent, ArticleTitle, ArticleInfo } from './styles';
 import faker from 'faker';
+import moment from 'moment';
 
 const TextNewsCardItem = ({
     article = {
@@ -10,10 +11,11 @@ const TextNewsCardItem = ({
     },
 }) => {
     return (
-        <Container>
-            <a href={article.url} rel="noopener noreferrer" target="_blank">
-                {article.title}
-            </a>
+        <Container href={article.url} rel="noopener noreferrer" target="_blank">
+            <TextContent>
+                <ArticleTitle>{article.title}</ArticleTitle>
+                <ArticleInfo>{moment.utc(article.publishedAt).fromNow()}</ArticleInfo>
+            </TextContent>
         </Container>
     );
 };

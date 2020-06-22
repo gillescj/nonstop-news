@@ -7,6 +7,7 @@ import {
     ArticleInfo,
 } from './styles';
 import faker from 'faker';
+import moment from 'moment';
 
 const PrimaryNewsCard = ({
     article = {
@@ -35,7 +36,7 @@ const PrimaryNewsCard = ({
                 <ArticleInfo>
                     <div>{article.author}</div>
                     <div>{article.source.name}</div>
-                    <div>{article.publishedAt}</div>
+                    <div>{moment.utc(article.publishedAt).fromNow()}</div>
                 </ArticleInfo>
             </TextContent>
         </Container>

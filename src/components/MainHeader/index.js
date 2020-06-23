@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, OuterBanner, MiddleBanner, HeaderContent } from './styles';
-import Navigation from '../Navigation';
+import Navigation from './Navigation';
 import NewsLabelBanner from './NewsLabelBanner';
 
 const MainHeader = () => {

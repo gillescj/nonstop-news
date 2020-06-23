@@ -13,16 +13,16 @@ export const Logo = styled.div`
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
+    align-self: center;
+    @media (${QUERIES.small}) {
+        font-size: 1.25rem;
+    }
 `;
 
 export const SectionsContainer = styled.div`
     display: grid;
     grid-gap: 0.5rem;
     grid-template-columns: 1fr auto;
-    @media (${QUERIES.small}) {
-        justify-items: center;
-        justify-content: center;
-    }
 `;
 
 export const CategoryList = styled.ul`
@@ -54,6 +54,7 @@ const Dropdown = styled.select`
     font-size: 1rem;
     padding-left: 4px;
     padding-right: 14px;
+    min-height: 2rem;
     cursor: pointer;
     optgroup,
     option {
@@ -85,7 +86,7 @@ export const CountryDropdown = styled(Dropdown)`
 export const SectionDropdown = styled(Dropdown)`
     display: none;
     justify-self: end;
-    max-width: 8rem;
+    max-width: 7rem;
     @media (${QUERIES.small}) {
         display: block;
     }

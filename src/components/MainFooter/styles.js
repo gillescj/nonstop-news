@@ -8,7 +8,7 @@ export const Container = styled.footer`
     justify-items: space-between;
     width: 100%;
     color: white;
-    background: ${COLOURS.darkPurple};
+    background: linear-gradient(${COLOURS.darkPurple}, ${COLOURS.lightPurple});
 `;
 
 export const Attribution = styled.div`

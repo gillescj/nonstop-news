@@ -7,6 +7,7 @@ import {
     ArticleInfo,
 } from './styles';
 import moment from 'moment';
+import imagePlaceholderSVG from 'assets/images/svgs/imagePlaceholder.svg';
 
 const SecondaryNewsCard = ({ article }) => {
     const limitTextSize = (text, limit) => {
@@ -20,7 +21,11 @@ const SecondaryNewsCard = ({ article }) => {
             {!article ? null : (
                 <Container href={article.url} rel="noopener noreferrer" target="_blank">
                     <ImageWrapper>
-                        <img src={article.urlToImage} alt={article.title} />
+                        {!article.urlToImage ? (
+                            <img src={imagePlaceholderSVG} alt={article.title} />
+                        ) : (
+                            <img src={article.urlToImage} alt={article.title} />
+                        )}
                     </ImageWrapper>
                     <TextContent>
                         <ArticleMainText>

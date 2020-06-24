@@ -22,6 +22,12 @@ const SecondaryNewsCard = ({
         urlToImage: faker.image.image(),
     },
 }) => {
+    const limitTextSize = (text, limit) => {
+        if (!text) return;
+        if (text.length > limit) return;
+        return text;
+    };
+
     return (
         <Container href={article.url} rel="noopener noreferrer" target="_blank">
             <ImageWrapper>
@@ -32,8 +38,8 @@ const SecondaryNewsCard = ({
                     <h3>{article.title}</h3>
                 </ArticleMainText>
                 <ArticleInfo>
-                    <div>{article.author}</div>
-                    <div>{article.source.name}</div>
+                    <div>{limitTextSize(article.author, 20)}</div>
+                    <div>{limitTextSize(article.source.name, 20)}</div>
                     <div>{moment.utc(article.publishedAt).fromNow()}</div>
                 </ArticleInfo>
             </TextContent>

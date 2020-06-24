@@ -7,8 +7,6 @@ const articlesSlice = createSlice({
         list: [],
         loading: false,
     },
-    loading: false,
-    error: null,
     reducers: {
         articlesRequested: (state, action) => {
             state.loading = true;

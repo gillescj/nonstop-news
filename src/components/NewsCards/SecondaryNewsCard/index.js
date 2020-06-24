@@ -16,6 +16,10 @@ const SecondaryNewsCard = ({ article }) => {
         return text;
     };
 
+    const onImageError = (event) => {
+        event.target.src = imagePlaceholderSVG;
+    };
+
     return (
         <>
             {!article ? null : (
@@ -24,7 +28,12 @@ const SecondaryNewsCard = ({ article }) => {
                         {!article.urlToImage ? (
                             <img src={imagePlaceholderSVG} alt={article.title} />
                         ) : (
-                            <img src={article.urlToImage} alt={article.title} />
+                            <img
+                                src={article.urlToImage}
+                                alt={article.title}
+                                // onError={`this.onerror=null;this.src='${imagePlaceholderSVG}';`}
+                                onError={(event) => onImageError(event)}
+                            />
                         )}
                     </ImageWrapper>
                     <TextContent>

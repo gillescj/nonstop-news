@@ -6,7 +6,7 @@ export const Container = styled.a`
     grid-template-columns: minmax(15rem, 35rem);
     grid-template-rows: auto 1fr;
     border: 1px solid ${COLOURS.lightGrey};
-    transition: 0.4s;
+    transition: 0.3s;
     cursor: pointer;
     &:hover {
         box-shadow: 0 0 0 3px ${COLOURS.darkPurple};

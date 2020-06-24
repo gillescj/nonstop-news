@@ -10,7 +10,7 @@ export const Container = styled.a`
     padding: 1rem;
     max-width: 30rem;
     border: 1px solid ${COLOURS.lightGrey};
-    transition: 0.4s;
+    transition: 0.3s;
     cursor: pointer;
     &:hover {
         box-shadow: 0 0 0 3px ${COLOURS.darkPurple};

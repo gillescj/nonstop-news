@@ -1,11 +1,14 @@
 import React from 'react';
 import { Container } from './styles';
+import { useSelector } from 'react-redux';
 
-const NewsLabelBanner = ({ category, country }) => {
+const NewsLabelBanner = () => {
+    const settings = useSelector((state) => state.settings);
+
     return (
         <Container>
-            {country}
-            {category !== 'General' ? ' ' + category : null}
+            {settings.country.name}
+            {settings.category !== 'General' ? ' ' + settings.category : null}
         </Container>
     );
 };

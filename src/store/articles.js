@@ -36,12 +36,12 @@ export const {
 export default articlesSlice.reducer;
 
 // Action Creators
-export const loadArticles = () =>
+export const loadArticles = (category, countryCode) =>
     newsApiCallRequested({
         url: '/top-headlines',
         params: {
-            category: 'general',
-            country: 'ca',
+            category: category,
+            country: countryCode,
             pageSize: 32,
         },
         onStart: articlesRequested.type,

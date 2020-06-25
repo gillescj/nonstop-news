@@ -13,7 +13,7 @@ const MainHeader = () => {
                 </HeaderContent>
             </MiddleBanner>
             <OuterBanner />
-            <NewsLabelBanner category="Business" country="Canada" />
+            <NewsLabelBanner />
         </Container>
     );
 };

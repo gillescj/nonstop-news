@@ -8,12 +8,13 @@ import BottomContent from '../BottomContent';
 
 const MainContainer = () => {
     const dispatch = useDispatch();
+    const settings = useSelector((state) => state.settings);
     const articles = useSelector((state) => state.articles.list);
     const loading = useSelector((state) => state.articles.loading);
 
     useEffect(() => {
-        dispatch(loadArticles());
-    }, []);
+        dispatch(loadArticles(settings.category, settings.country.code));
+    }, [settings.category, settings.category.code]);
 
     return (
         <Container>

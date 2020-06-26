@@ -14,7 +14,7 @@ const MainContainer = () => {
 
     useEffect(() => {
         dispatch(loadArticles(settings.category, settings.country.code));
-    }, [settings.category, settings.country.code]);
+    }, [settings.category, settings.country.code, dispatch]);
 
     return (
         <Container>

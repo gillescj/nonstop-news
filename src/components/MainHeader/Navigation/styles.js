@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { QUERIES, COLOURS } from 'styling';
+import { QUERIES } from 'styling';
 import arrowSVG from 'assets/images/svgs/arrow.svg';
 
 export const Container = styled.nav`

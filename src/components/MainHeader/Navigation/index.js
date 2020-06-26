@@ -1,4 +1,6 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { changeCategory, changeCountry } from 'store/settings';
 import {
     Container,
     Logo,
@@ -15,52 +17,79 @@ const sortedCountries = acceptedCountries.sort((a, b) => {
 });
 
 const Navigation = () => {
+    const dispatch = useDispatch();
+
+    const categoryNameList = [
+        'General',
+        'Business',
+        'Entertainment',
+        'Health',
+        'Science',
+        'Sports',
+        'Technology',
+    ];
+
+    const renderedCategoryList = categoryNameList.slice(1).map((category) => {
+        return (
+            <li key={category} onClick={() => dispatch(changeCategory(category))}>
+                {category}
+            </li>
+        );
+    });
+
+    const renderedCategoryOptions = categoryNameList.map((category) => {
+        return (
+            <option key={category} onClick={() => dispatch(changeCategory(category))}>
+                {category}
+            </option>
+        );
+    });
+
     const renderedCountryOptions = sortedCountries.map((country) => {
-        return <option key={country.code}>{country.name}</option>;
+        return (
+            <option
+                key={country.code}
+                onClick={() =>
+                    dispatch(changeCountry({ code: country.code, name: country.name }))
+                }
+            >
+                {country.name}
+            </option>
+        );
     });
 
     return (
         <Container>
-            <Logo>Nonstop News</Logo>
+            <Logo onClick={() => dispatch(changeCategory('General'))}>Nonstop News</Logo>
             <SectionsContainer>
-                <CategoryList>
-                    <li>Business</li>
-                    <li>Entertainment</li>
-                    <li>Health</li>
-                    <li>Science</li>
-                    <li>Sports</li>
-                    <li>Technology</li>
-                </CategoryList>
-                <CategoryDropdown defaultValue="Categories">
+                <CategoryList>{renderedCategoryList}</CategoryList>
+                <CategoryDropdown
+                    defaultValue="Categories"
+                    onChange={(event) => (event.target.value = 'Categories')}
+                >
                     <option disabled hidden>
                         Categories
                     </option>
-                    <option>General</option>
-                    <option>Business</option>
-                    <option>Entertainment</option>
-                    <option>Health</option>
-                    <option>Science</option>
-                    <option>Sports</option>
-                    <option>Technology</option>
+                    {renderedCategoryOptions}
                 </CategoryDropdown>
-                <CountryDropdown defaultValue="Countries">
+                <CountryDropdown
+                    defaultValue="Countries"
+                    onChange={(event) => (event.target.value = 'Countries')}
+                >
                     <option disabled hidden>
                         Countries
                     </option>
                     {renderedCountryOptions}
                 </CountryDropdown>
-                <SectionDropdown defaultValue="Sections">
+                <SectionDropdown
+                    defaultValue="Sections"
+                    onChange={(event) => (event.target.value = 'Sections')}
+                >
                     <optgroup label="Categories">
                         <option disabled hidden>
                             Sections
                         </option>
-                        <option>General</option>
-                        <option>Business</option>
-                        <option>Entertainment</option>
-                        <option>Health</option>
-                        <option>Science</option>
-                        <option>Sports</option>
-                        <option>Technology</option>
+                        {renderedCategoryOptions}
                     </optgroup>
                     <optgroup label="Countries">{renderedCountryOptions}</optgroup>
                 </SectionDropdown>

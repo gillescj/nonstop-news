@@ -12,7 +12,7 @@ const newsApi = ({ dispatch }) => (next) => async (action) => {
 
     try {
         const response = await axios.request({
-            baseURL: `${process.env.REACT_APP_CORS_PROXY}https://newsapi.org/v2`,
+            baseURL: `${process.env.REACT_APP_CORS_PROXY}https://api.currentsapi.services/v1`,
             url,
             method,
             params: {
@@ -21,8 +21,8 @@ const newsApi = ({ dispatch }) => (next) => async (action) => {
             },
         });
 
-        dispatch(actions.newsApiCallSuccess(response.data.articles));
-        if (onSuccess) dispatch({ type: onSuccess, payload: response.data.articles });
+        dispatch(actions.newsApiCallSuccess(response.data.news));
+        if (onSuccess) dispatch({ type: onSuccess, payload: response.data.news });
     } catch (error) {
         dispatch(actions.newsApiCallFailed(error.message));
         if (onError) dispatch({ type: onError, payload: error.message });

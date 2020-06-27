@@ -5,6 +5,7 @@ import { Container } from './styles';
 import TopContent from '../TopContent';
 import MiddleContent from '../MiddleContent';
 import BottomContent from '../BottomContent';
+import NoContentBox from './NoContentBox';
 
 const MainContainer = () => {
     const dispatch = useDispatch();
@@ -56,6 +57,8 @@ const MainContainer = () => {
         <Container>
             {loading ? (
                 'Loading'
+            ) : articles.length === 0 ? (
+                <NoContentBox>No content!</NoContentBox>
             ) : (
                 <>
                     <TopContent topArticles={imageArticles.slice(0, 4)} />

@@ -29,11 +29,13 @@ const Navigation = () => {
         { code: 'technology', name: 'Technology' },
     ];
 
-    const renderedCategoryList = categoryNameList.slice(1).map((category) => {
+    const renderedCategoryList = categoryNameList.map((category) => {
         return (
             <li
                 key={category.code}
-                onClick={() => dispatch(changeCategory(category.code))}
+                onClick={() =>
+                    dispatch(changeCategory({ code: category.code, name: category.name }))
+                }
             >
                 {category.name}
             </li>
@@ -44,7 +46,9 @@ const Navigation = () => {
         return (
             <option
                 key={category.code}
-                onClick={() => dispatch(changeCategory(category.code))}
+                onClick={() =>
+                    dispatch(changeCategory({ code: category.code, name: category.name }))
+                }
             >
                 {category.name}
             </option>
@@ -66,7 +70,13 @@ const Navigation = () => {
 
     return (
         <Container>
-            <Logo onClick={() => dispatch(changeCategory('regional'))}>Nonstop News</Logo>
+            <Logo
+                onClick={() =>
+                    dispatch(changeCategory({ code: 'regional', name: 'National' }))
+                }
+            >
+                Nonstop News
+            </Logo>
             <SectionsContainer>
                 <CategoryList>{renderedCategoryList}</CategoryList>
                 <CategoryDropdown

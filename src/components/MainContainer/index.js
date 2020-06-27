@@ -13,8 +13,8 @@ const MainContainer = () => {
     const loading = useSelector((state) => state.articles.loading);
 
     useEffect(() => {
-        dispatch(loadArticles(settings.category, settings.country.code));
-    }, [settings.category, settings.country.code, dispatch]);
+        dispatch(loadArticles(settings.category.code, settings.country.code));
+    }, [settings.category.code, settings.country.code, dispatch]);
 
     const formattedArticles = articles.map((article) => {
         return {

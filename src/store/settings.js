@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const settingsSlice = createSlice({
     name: 'settings',
     initialState: {
-        category: 'regional',
+        category: { code: 'regional', name: 'National' },
         country: { code: 'ca', name: 'Canada' },
     },
     reducers: {

@@ -36,11 +36,11 @@ export const {
 export default articlesSlice.reducer;
 
 // Action Creators
-export const loadArticles = (category, countryCode) =>
+export const loadArticles = (categoryCode, countryCode) =>
     newsApiCallRequested({
         url: '/latest-news',
         params: {
-            category: category,
+            category: categoryCode,
             country: countryCode,
             pageSize: 32,
         },

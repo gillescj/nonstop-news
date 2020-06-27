@@ -8,7 +8,7 @@ const NewsLabelBanner = () => {
     return (
         <Container>
             {settings.country.name}
-            {settings.category !== 'regional' ? ' ' + settings.category : null}
+            {settings.category.code !== 'regional' ? ' ' + settings.category.name : null}
         </Container>
     );
 };

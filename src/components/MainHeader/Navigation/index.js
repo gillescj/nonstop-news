@@ -20,27 +20,33 @@ const Navigation = () => {
     const dispatch = useDispatch();
 
     const categoryNameList = [
-        'General',
-        'Business',
-        'Entertainment',
-        'Health',
-        'Science',
-        'Sports',
-        'Technology',
+        { code: 'regional', name: 'National' },
+        { code: 'business', name: 'Business' },
+        { code: 'entertainment', name: 'Entertainment' },
+        { code: 'health', name: 'Health' },
+        { code: 'science', name: 'Science' },
+        { code: 'sports', name: 'Sports' },
+        { code: 'technology', name: 'Technology' },
     ];
 
     const renderedCategoryList = categoryNameList.slice(1).map((category) => {
         return (
-            <li key={category} onClick={() => dispatch(changeCategory(category))}>
-                {category}
+            <li
+                key={category.code}
+                onClick={() => dispatch(changeCategory(category.code))}
+            >
+                {category.name}
             </li>
         );
     });
 
     const renderedCategoryOptions = categoryNameList.map((category) => {
         return (
-            <option key={category} onClick={() => dispatch(changeCategory(category))}>
-                {category}
+            <option
+                key={category.code}
+                onClick={() => dispatch(changeCategory(category.code))}
+            >
+                {category.name}
             </option>
         );
     });

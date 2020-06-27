@@ -66,7 +66,7 @@ const Navigation = () => {
 
     return (
         <Container>
-            <Logo onClick={() => dispatch(changeCategory('General'))}>Nonstop News</Logo>
+            <Logo onClick={() => dispatch(changeCategory('regional'))}>Nonstop News</Logo>
             <SectionsContainer>
                 <CategoryList>{renderedCategoryList}</CategoryList>
                 <CategoryDropdown

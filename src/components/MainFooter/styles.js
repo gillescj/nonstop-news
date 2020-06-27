@@ -25,11 +25,11 @@ export const CountryContainer = styled.div`
     padding: 1rem;
     grid-row-gap: 1rem;
     grid-auto-flow: column;
-    grid-template-rows: repeat(8, minmax(0.5rem, 1rem));
+    grid-template-rows: repeat(3, minmax(0.5rem, 1rem));
     @media (${QUERIES.medium}) {
-        grid-template-rows: repeat(10, 1rem);
+        grid-template-rows: repeat(4, 1rem);
     }
-    @media (${QUERIES.smallMedium}) {
+    @media (${QUERIES.small}) {
         display: none;
     }
 `;

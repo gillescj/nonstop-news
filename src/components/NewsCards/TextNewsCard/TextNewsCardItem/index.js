@@ -10,7 +10,10 @@ const TextNewsCardItem = ({ article }) => {
                     <TextContent>
                         <ArticleTitle>{article.title}</ArticleTitle>
                         <ArticleInfo>
-                            {moment.utc(article.publishedAt).fromNow()}
+                            {moment(
+                                article.publishedAt,
+                                'YYYY-MM-DD HH:mm:ssZZ'
+                            ).fromNow()}
                         </ArticleInfo>
                     </TextContent>
                 </Container>

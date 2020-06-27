@@ -43,7 +43,12 @@ const SecondaryNewsCard = ({ article }) => {
                         <ArticleInfo>
                             <div>{limitTextSize(article.author, 20)}</div>
                             <div>{limitTextSize(article.source.name, 20)}</div>
-                            <div>{moment.utc(article.publishedAt).fromNow()}</div>
+                            <div>
+                                {moment(
+                                    article.publishedAt,
+                                    'YYYY-MM-DD HH:mm:ssZZ'
+                                ).fromNow()}
+                            </div>
                         </ArticleInfo>
                     </TextContent>
                 </Container>

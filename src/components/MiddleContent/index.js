@@ -3,16 +3,17 @@ import { Container, PrimaryNewsCardsContainer } from './styles';
 import PrimaryNewsCard from '../NewsCards/PrimaryNewsCard';
 import TextNewsCard from '../NewsCards/TextNewsCard';
 
-const MiddleContent = ({ middleArticles }) => {
+const MiddleContent = ({ middleImageArticles, middleTextArticles }) => {
+    const renderedMiddleImageArticles = middleImageArticles.map((article) => {
+        return <PrimaryNewsCard key={article.id} article={article} />;
+    });
+
     return (
         <Container>
             <PrimaryNewsCardsContainer>
-                <PrimaryNewsCard article={middleArticles[0]} />
-                <PrimaryNewsCard article={middleArticles[1]} />
-                <PrimaryNewsCard article={middleArticles[2]} />
-                <PrimaryNewsCard article={middleArticles[3]} />
+                {renderedMiddleImageArticles}
             </PrimaryNewsCardsContainer>
-            <TextNewsCard textArticles={middleArticles.slice(4)} />
+            <TextNewsCard textArticles={middleTextArticles} />
         </Container>
     );
 };

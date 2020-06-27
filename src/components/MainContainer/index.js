@@ -16,15 +16,54 @@ const MainContainer = () => {
         dispatch(loadArticles(settings.category, settings.country.code));
     }, [settings.category, settings.country.code, dispatch]);
 
+    const formattedArticles = articles.map((article) => {
+        return {
+            source: {
+                id: null,
+                name: null,
+            },
+            id: article.id,
+            category: article.category,
+            language: article.language,
+            author: article.author,
+            title: article.title,
+            description: article.description,
+            url: article.url,
+            urlToImage: article.image,
+            publishedAt: article.published,
+        };
+    });
+
+    const imageFilteredArticles = formattedArticles.filter((article) => {
+        return article.urlToImage !== null && article.urlToImage !== 'None';
+    });
+
+    const nonImageFilteredArticles = formattedArticles.filter((article) => {
+        return article.urlToImage === null || article.urlToImage === 'None';
+    });
+
+    const imageArticles = [
+        ...imageFilteredArticles.slice(0, 20),
+        ...nonImageFilteredArticles.slice(12),
+    ];
+
+    const middleTextArticles = [
+        ...nonImageFilteredArticles.slice(0, 12),
+        ...imageFilteredArticles.slice(20),
+    ];
+
     return (
         <Container>
             {loading ? (
                 'Loading'
             ) : (
                 <>
-                    <TopContent topArticles={articles.slice(0, 4)} />
-                    <MiddleContent middleArticles={articles.slice(4, 20)} />
-                    <BottomContent bottomArticles={articles.slice(20)} />
+                    <TopContent topArticles={imageArticles.slice(0, 4)} />
+                    <MiddleContent
+                        middleImageArticles={imageArticles.slice(4, 8)}
+                        middleTextArticles={middleTextArticles.slice(0, 12)}
+                    />
+                    <BottomContent bottomArticles={imageArticles.slice(8, 20)} />
                 </>
             )}
         </Container>

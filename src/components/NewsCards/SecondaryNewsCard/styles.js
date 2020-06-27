@@ -22,6 +22,7 @@ export const ImageWrapper = styled.div`
     max-height: 12rem;
     justify-self: center;
     float: right;
+    overflow: hidden;
 `;
 
 export const TextContent = styled.div`

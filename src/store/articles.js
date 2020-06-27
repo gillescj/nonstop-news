@@ -5,7 +5,7 @@ const articlesSlice = createSlice({
     name: 'articles',
     initialState: {
         list: [],
-        loading: false,
+        loading: true,
     },
     reducers: {
         articlesRequested: (state, action) => {

@@ -11,8 +11,12 @@ const MainFooter = () => {
         <Container>
             <Attribution>
                 Made possible with{' '}
-                <a href="https://newsapi.org/" target="_blank" rel="noopener noreferrer">
-                    NewsAPI
+                <a
+                    href="https://www.currentsapi.services/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Currents API
                 </a>
             </Attribution>
             <CountryContainer>{renderedCountryLinks}</CountryContainer>

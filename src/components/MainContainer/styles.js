@@ -6,3 +6,7 @@ export const Container = styled.div`
     justify-self: center;
     max-width: ${QUERIES.maxWidth};
 `;
+
+export const LoaderContainer = styled.div`
+    padding-top: 2rem;
+`;

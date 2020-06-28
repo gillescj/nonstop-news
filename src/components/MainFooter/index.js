@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Attribution, CountryContainer } from './styles';
-import acceptedCountries from 'utils/acceptedCountries';
+import { acceptedCountriesList } from 'utils/acceptedCountries';
 
 const MainFooter = () => {
-    const renderedCountryLinks = acceptedCountries.map((country) => {
+    const renderedCountryLinks = acceptedCountriesList.map((country) => {
         return <h4 key={country.code}>{country.name}</h4>;
     });
 

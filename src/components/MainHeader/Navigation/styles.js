@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import { QUERIES } from 'styling';
-import arrowSVG from 'assets/images/svgs/arrow.svg';
+import { QUERIES, COLOURS } from 'styling';
+import arrowLightSVG from 'assets/images/svgs/arrow-light.svg';
+import arrowDarkSVG from 'assets/images/svgs/arrow-dark.svg';
 
 export const Container = styled.nav`
     display: grid;
@@ -16,6 +17,9 @@ export const Logo = styled.div`
     align-self: center;
     @media (${QUERIES.small}) {
         font-size: 1.25rem;
+    }
+    &:hover {
+        text-decoration: underline;
     }
 `;
 
@@ -47,7 +51,7 @@ const Dropdown = styled.select`
     overflow: hidden;
     border: 2px solid white;
     font-weight: bold;
-    background: url(${arrowSVG}) no-repeat 95%;
+    background: url(${arrowLightSVG}) no-repeat 95%;
     -moz-appearance: none;
     -webkit-appearance: none;
     color: white;
@@ -61,6 +65,11 @@ const Dropdown = styled.select`
         font-weight: normal;
         color: black;
         padding: 1rem;
+    }
+    &:hover {
+        background: url(${arrowDarkSVG}) no-repeat 95%, white;
+        color: ${COLOURS.darkPurple};
+        border: 2px solid ${COLOURS.lightPurple};
     }
 `;
 

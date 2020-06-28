@@ -1,4 +1,4 @@
-const acceptedCountries = [
+export const acceptedCountriesList = [
     { code: 'au', name: 'Australia' },
     { code: 'ca', name: 'Canada' },
     { code: 'cn', name: 'China' },
@@ -16,4 +16,20 @@ const acceptedCountries = [
     { code: 'us', name: 'United States' },
 ];
 
-export default acceptedCountries;
+export const acceptedCountriesObject = {
+    au: { code: 'au', name: 'Australia' },
+    ca: { code: 'ca', name: 'Canada' },
+    cn: { code: 'cn', name: 'China' },
+    de: { code: 'de', name: 'Germany' },
+    fr: { code: 'fr', name: 'France' },
+    gb: { code: 'gb', name: 'United Kingdom' },
+    gr: { code: 'gr', name: 'Greece' },
+    ie: { code: 'ie', name: 'Ireland' },
+    in: { code: 'in', name: 'India' },
+    it: { code: 'it', name: 'Italy' },
+    jp: { code: 'jp', name: 'Japan' },
+    kr: { code: 'kr', name: 'South Korea' },
+    mx: { code: 'mx', name: 'Mexico' },
+    nz: { code: 'nz', name: 'New Zealand' },
+    us: { code: 'us', name: 'United States' },
+};

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLOURS } from 'styling';
+import { COLOURS, QUERIES } from 'styling';
 
 export const Container = styled.a`
     display: grid;
@@ -21,8 +21,11 @@ export const ImageWrapper = styled.div`
     max-width: 12rem;
     max-height: 12rem;
     justify-self: center;
-    float: right;
     overflow: hidden;
+    @media (${QUERIES.small}) {
+        max-height: 100%;
+        max-width: 100%;
+    }
 `;
 
 export const TextContent = styled.div`

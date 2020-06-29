@@ -26,6 +26,14 @@ export const CountryContainer = styled.div`
     grid-row-gap: 1rem;
     grid-auto-flow: column;
     grid-template-rows: repeat(3, minmax(0.5rem, 1rem));
+    h4 {
+        justify-self: start;
+        cursor: pointer;
+        color: hsl(250, 0%, 85%);
+        &:hover {
+            color: white;
+        }
+    }
     @media (${QUERIES.medium}) {
         grid-template-rows: repeat(4, 1rem);
     }

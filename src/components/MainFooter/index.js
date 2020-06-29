@@ -1,10 +1,23 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { changeCountry } from 'store/settings';
 import { Container, Attribution, CountryContainer } from './styles';
-import { acceptedCountriesList } from 'utils/acceptedCountries';
+import { acceptedCountriesList, acceptedCountriesObject } from 'utils/acceptedCountries';
 
 const MainFooter = () => {
+    const dispatch = useDispatch();
+
     const renderedCountryLinks = acceptedCountriesList.map((country) => {
-        return <h4 key={country.code}>{country.name}</h4>;
+        return (
+            <h4
+                key={country.code}
+                onClick={() =>
+                    dispatch(changeCountry(acceptedCountriesObject[country.code]))
+                }
+            >
+                {country.name}
+            </h4>
+        );
     });
 
     return (

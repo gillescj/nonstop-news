@@ -4,7 +4,7 @@ const settingsSlice = createSlice({
     name: 'settings',
     initialState: {
         category: { code: 'regional', name: 'National' },
-        country: { code: 'ca', name: 'Canada' },
+        country: { code: 'us', name: 'United States' },
     },
     reducers: {
         changeCategory: (state, action) => {

@@ -15,11 +15,28 @@ export const Logo = styled.div`
     font-weight: bold;
     cursor: pointer;
     align-self: center;
+    position: relative;
+    text-decoration: none;
+    &:hover {
+        &:before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
+    }
     @media (${QUERIES.small}) {
         font-size: 1.25rem;
-    }
-    &:hover {
-        text-decoration: underline;
     }
 `;
 
@@ -38,8 +55,24 @@ export const CategoryList = styled.ul`
         padding: 0 1rem;
         font-size: 1rem;
         cursor: pointer;
+        position: relative;
+        text-decoration: none;
         &:hover {
-            text-decoration: underline;
+            &:before {
+                visibility: visible;
+                transform: scaleX(1);
+            }
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            width: calc(100% - 2rem);
+            height: 2px;
+            bottom: 0;
+            background: white;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.2s ease-in-out;
         }
     }
     @media (${QUERIES.medium}) {

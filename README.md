@@ -19,4 +19,4 @@ npm run start
 
 ![Nonstop News Desktop](https://github.com/gillescj/files/blob/master/nonstop-news-screenshot.png?raw=true)
 
-![Nonstop News Mobile](https://github.com/gillescj/files/blob/master/mobile-nonstop-news-screenshot.png?raw=true)
+![Nonstop News Mobile](https://github.com/gillescj/files/blob/master/mobile-nonstop-news-screenshot.jpg?raw=true)

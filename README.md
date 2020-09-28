@@ -4,7 +4,7 @@ A news article distribution website.
 
 I developed this to get practice with Redux and React-Redux.
 
-[Nonstop News](https://nonstop-news.colingillespie.dev/)
+[Live Site Here](https://nonstop-news.colingillespie.dev/)
 
 Using the [Currents API](https://www.currentsapi.services)
 
@@ -16,3 +16,7 @@ Within root:
 npm install
 npm run start
 ```
+
+![Nonstop News Desktop](https://github.com/gillescj/files/blob/master/nonstop-news-screenshot.png?raw=true)
+
+![Nonstop News Mobile](https://github.com/gillescj/files/blob/master/mobile-nonstop-news-screenshot.png?raw=true)
